@@ -1,2 +1,2 @@
 var assert = require('assert');
-var C = require('../satanajs');
+var C = require('../satana.js');
