@@ -1,16 +1,16 @@
 {
-  "name": "learn-mocha",
+  "name": "Premi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nelsonic/learn-mocha.git"
+    "url": "https://github.com/PetrucciMauro/source"
   },
-  "description": "Simple mocha.js tutorial including istanbul test coverage",
-  "author": "https://twitter.com/nelsonic",
-  "version": "0.0.2",
+  "description": "Testing node.js",
+  "author": "LateButSafe",
+  "version": "0.0.1",
   "devDependencies": {
-    "mocha": "1.21.4",
-    "istanbul":"0.3.2",
-    "coveralls":"2.11.1"
+    "mocha": "latest",
+    "istanbul":"latest",
+    "coveralls":"latest"
   },
   "scripts": {
     "test": "mocha",
