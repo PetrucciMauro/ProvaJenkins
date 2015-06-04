@@ -12,7 +12,7 @@
     "istanbul":"latest",
     "coveralls":"latest"
   },
-     "scripts": {
+    "scripts": {
         "pretest": "jshint index.js lib/ test/ && ./download-escodegen-browser.sh",
         "test": "node --harmony test/run.js",
         "posttest": "node ./lib/cli.js check-coverage --statements 95 --branches 80",
@@ -25,7 +25,32 @@
       "index.js",
       "lib/"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/gotwarlost/istanbul.git"
+    },
+    "dependencies": {
+        "esprima": "2.1.x",
+        "escodegen": "1.6.x",
+        "handlebars": "3.0.0",
+        "mkdirp": "0.5.x",
+        "nopt": "3.x",
+        "fileset": "0.1.x",
+        "which": "1.0.x",
+        "async": "0.9.x",
+        "supports-color": "1.3.x",
+        "abbrev": "1.0.x",
+        "wordwrap": "0.0.x",
+        "resolve": "1.1.x",
+        "js-yaml": "3.x",
+        "once": "1.x"
+    },
+    "devDependencies": {
+        "rimraf": "2.2.x",
+        "nodeunit": "0.9.x",
+        "jshint": "2.5.x",
+        "requirejs": "2.x",
+        "coveralls": "2.x",
+        "glob": "4.4.x"
+    }
 }
-
-
-
