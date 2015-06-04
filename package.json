@@ -13,8 +13,8 @@
     "coveralls":"latest"
   },
   "scripts": {
-   "test": "./usr/local/lib/node_modules/mocha/bin/mocha ./test/*",
-   "test-travis": "./usr/local/lib/node_modules/istanbul/lib/cli.js cover ./usr/local/lib/node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+   "test": "./node_modules/mocha/bin/mocha ./test/*",
+   "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
  }
 }
 
