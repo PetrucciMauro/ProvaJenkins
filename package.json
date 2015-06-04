@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "coverage":"istanbul cover _mocha"
+    "coverage":"istanbul cover --hook-run-in-context node_modules/mocha/bin/_mocha -- -R spec"
     
   }
 }
