@@ -12,10 +12,19 @@
     "istanbul":"latest",
     "coveralls":"latest"
   },
-  "scripts": {
-   "test": "istanbul cover _mocha -- -R spec",
-   "test-travis": "istanbul cover _mocha -- -R spec"
- }
+     "scripts": {
+        "pretest": "jshint index.js lib/ test/ && ./download-escodegen-browser.sh",
+        "test": "node --harmony test/run.js",
+        "posttest": "node ./lib/cli.js check-coverage --statements 95 --branches 80",
+        "docs": "npm install yuidocjs && node node_modules/yuidocjs/lib/cli.js ."
+    },
+    "bin": {
+        "istanbul": "./lib/cli.js"
+    },
+    "files": [
+      "index.js",
+      "lib/"
+    ],
 }
 
 
