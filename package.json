@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "test-on-travis":"istanbul cover _mocha test/*.js"
+    "test-on-travis":"istanbul cover _mocha"
     
   }
 }
