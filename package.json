@@ -13,10 +13,9 @@
     "coveralls":"latest"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage":"istanbul cover ./usr/local/lib/node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
-    "coveralls":"istanbul cover ./usr/local/lib/node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
-  }
+   "test": "./node_modules/mocha/bin/mocha ./test/*",
+   "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+ }
 }
 
 
