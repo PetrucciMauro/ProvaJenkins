@@ -13,7 +13,7 @@
     "coveralls":"latest"
   },
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test": "mocha",
     "test-on-travis":"istanbul cover _mocha test/*.js"
     
   }
