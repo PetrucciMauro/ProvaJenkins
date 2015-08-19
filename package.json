@@ -46,8 +46,7 @@
   },
   "scripts": {
     "pretest":"sudo npm install",
-    "test":"istanbul cover _mocha test/**/*.js",
-    "test-cov":"istanbul cover _mocha test/**/*.js"
+    "test":"istanbul cover _mocha test/*.js -- serverRelation/**/*.js"
     
   }
 }
