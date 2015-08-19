@@ -41,12 +41,14 @@
     "mongoose":"4.0.7",
     "multer":"0.1.8",
     "mongodb":"latest",
-    "xmlhttprequest":"latest"
+    "xmlhttprequest":"latest",
+    "brace-expansion":"latest",
+    "path-is-absolute":"latest"
 
   },
   "scripts": {
     "pretest":"sudo npm install",
-    "test":"istanbul cover _mocha test/*.js -- serverRelation/**/*.js"
+    "test":"istanbul cover _mocha  -- serverRelation/**/*.js"
     
   }
 }
