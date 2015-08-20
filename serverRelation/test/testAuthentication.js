@@ -16,9 +16,10 @@ describe("authentication", function(){
 								 MongoClient.connect(database, function(err, db) {
 															db.collection('users').remove({}, function(err, doc){
 																									if(err) return done(err);
-																									var dir= __dirname+'/../files/';
+																									var dir= __dirname+'/../../files/';
 																									rmdir.sync(dir);
 																									fs.mkdirSync(dir);
+                                                  db.close();
 																									done();
 																									});
 															});
@@ -28,9 +29,10 @@ describe("authentication", function(){
 								MongoClient.connect(database, function(err, db) {
 														  db.collection('users').remove({}, function(err, doc){
 																								  if(err) return done(err);
-																								  var dir= __dirname+'/../files/';
+																								  var dir= __dirname+'/../../files/';
 																								  rmdir.sync(dir);
 																								  fs.mkdirSync(dir);
+                                                  db.close();
 																								  done();
 																								  });
 														  });
@@ -50,6 +52,7 @@ describe("authentication", function(){
 													  db.collection('users').findOne({"username" : "provaname"}, function(err, doc){
 																								if(err) return done(err);
 																								assert.notEqual(null, doc);
+                                                           db.close();
 																								done();
 																								});
 													  });
@@ -71,6 +74,7 @@ describe("authentication", function(){
 													  db.collection('users').findOne({"username" : "provaname"}, function(err, doc){
 																								if(err) return done(err);
 																								assert.notEqual(null, doc);
+                                                           db.close();
 																								done();
 																								});
 													  });
@@ -85,9 +89,10 @@ describe("authentication", function(){
 									  MongoClient.connect(database, function(err, db) {
 																 db.collection('users').remove({}, function(err, doc){
 																										 if(err) return done(err);
-																										 var dir= __dirname+'/../files/';
+																										 var dir= __dirname+'/../../files/';
 																										 rmdir.sync(dir);
 																										 fs.mkdirSync(dir);
+                                                               db.close();
 																										 done();
 																										 });
 																 });
@@ -97,9 +102,10 @@ describe("authentication", function(){
 								MongoClient.connect(database, function(err, db) {
 														  db.collection('users').remove({}, function(err, doc){
 																								  if(err) return done(err);
-																								  var dir= __dirname+'/../files/';
+																								  var dir= __dirname+'/../../files/';
 																								  rmdir.sync(dir);
 																								  fs.mkdirSync(dir);
+                                                            db.close();
 																								  done();
 																								  });
 														  });
@@ -161,9 +167,10 @@ describe("authentication", function(){
 									  MongoClient.connect(database, function(err, db) {
 																 db.collection('users').remove({}, function(err, doc){
 																										 if(err) return done(err);
-																										 var dir= __dirname+'/../files/';
+																										 var dir= __dirname+'/../../files/';
 																										 rmdir.sync(dir);
 																										 fs.mkdirSync(dir);
+                                                               db.close();
 																										 done();
 																										 });
 																 });
@@ -173,9 +180,10 @@ describe("authentication", function(){
 								MongoClient.connect(database, function(err, db) {
 														  db.collection('users').remove({}, function(err, doc){
 																								  if(err) return done(err);
-																								  var dir= __dirname+'/../files/';
+																								  var dir= __dirname+'/../../files/';
 																								  rmdir.sync(dir);
 																								  fs.mkdirSync(dir);
+                                                            db.close();
 																								  done();
 																								  });
 														  });
@@ -199,6 +207,7 @@ describe("authentication", function(){
 													  db.collection('users').findOne({"username" : "provaname"}, function(err, doc){
 																								if(err) return done(err);
 																								assert.equal("newpass", doc.password);
+                                                           db.close();
 																								done();
 																								});
 													  });
@@ -217,6 +226,7 @@ describe("authentication", function(){
 													  db.collection('users').findOne({"username" : "provaname"}, function(err, doc){
 																								if(err) return done(err);
 																								assert.equal(null, doc);
+                                                           db.close();
 																								done();
 																								});
 													  });
@@ -240,6 +250,7 @@ describe("authentication", function(){
 													  db.collection('users').findOne({"username" : "provaname"}, function(err, doc){
 																								if(err) return done(err);
 																								assert.equal("provapass", doc.password);
+                                                           db.close();
 																								done();
 																								});
 													  });

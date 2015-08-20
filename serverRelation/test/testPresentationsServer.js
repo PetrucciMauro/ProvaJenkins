@@ -12,7 +12,7 @@ var config = function(done){
 							  db.collection('users').remove({}, function(err, doc){
 																	  if(err) return done(err);
 																	  db.collection('presentationsprovaname').remove({}, function(err, doc){
-																																	 var dir= __dirname+'/../files/';
+																																	 var dir= __dirname+'/../../files/';
 																																	 rmdir.sync(dir);
 																																	 fs.mkdirSync(dir);
 																																	 db.close();
