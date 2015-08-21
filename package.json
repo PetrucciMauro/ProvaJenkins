@@ -39,7 +39,7 @@
   },
   "scripts": {
     "pretest":"npm install",
-    "test":"istanbul cover _mocha  -- serverRelation/**/*.js"
+    "test":"mocha  serverRelation/**/*.js"
     
   }
 }
